@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Open Data Portal - ACTION PROJECT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+
+      <div class="container">
+        <div class="site-navbar bg-light">
+          <div class="py-1">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <!-- <h2 class="mb-0 site-logo"><a href="index.html">Job<strong class="font-weight-bold">Finder</strong> </a></h2> -->
+                <a href="https://actionproject.eu/">
+      						<img src="https://actionproject.eu/wp-content/uploads/2019/05/actiON.png" alt="ACTION Project" id="logo" width="100px">
+      					</a>
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">
+                  <div class="container">
+                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                      <!--
+                      <li><a href="categories.html">For Candidates</a></li>
+                      <li class="has-children">
+                        <a href="category.html">For Employees</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="category.html">Category</a></li>
+                          <li><a href="#">Browse Candidates</a></li>
+                          <li><a href="new-post.html">Post a Job</a></li>
+                          <li><a href="#">Employeer Profile</a></li>
+                          <li class="has-children">
+                            <a href="#">More Links</a>
+                            <ul class="dropdown">
+                              <li><a href="#">Browse Candidates</a></li>
+                              <li><a href="#">Post a Job</a></li>
+                              <li><a href="#">Employeer Profile</a></li>
+                            </ul>
+                          </li>
+
+                        </ul>
+                      </li>
+                    -->
+                      <li><a href="contact.html">Contact</a></li>
+                      <!--
+                      <li><a href="new-post.html"><span class="bg-primary text-white py-3 px-4 rounded"><span class="icon-plus mr-3"></span>Post New Job</span></a></li>
+                    -->
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 113px;"></div>
+
+    <div class="site-blocks-cover overlay" style="background-image: url('https://actionproject.eu/wp-content/uploads/2019/06/openess3b.jpg');" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12" data-aos="fade">
+            <center><h1 style="font-weight:700;font-size:120px">OPENNESS</h1></center>
+            <center><h1 style="font-weight:400;font-size:35px;margin:0 0 2rem 0">Open data, open knowledge, open tech, open access</h1></center>
+            <!-- <form action="#" onsubmit="handleSubmit();return false"> -->
+             <form id="searchField" action="#">
+              <div class="row mb-3">
+                <div class="col-md-9">
+                  <div class="row">
+                    <div class="col-md-12 mb-6 mb-md-0">
+                      <input id="query" type="text" class="mr-3 form-control border-0 px-4" placeholder="dataset title, authors or keywords ">
+                    </div>
+                    <!--
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <div class="input-wrap">
+                        <span class="icon icon-room"></span>
+                      <input type="text" class="form-control form-control-block search-input  border-0 px-4" id="autocomplete" placeholder="city, province or region" onFocus="geolocate()">
+                      </div>
+                    </div>
+                  -->
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <input type="submit" class="btn btn-search btn-primary btn-block" value="Search">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="small">or browse by category: <a class="category" id="deliverables">Deliverables</a> <a class="category" id="software">Software</a><a class="category" id="datasets">Datasets</a><a class="category" id="posters">Posters</a></p>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+            <h2 class="mb-5">Projects</h2>
+          </div>
+        </div>
+        <div id="projects" class="row">
+          <div  class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="100">
+            <a id="street-spectra" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2019/06/StreetSpectra_img.png" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2019/06/StreetSpectra_img.png 825w, https://actionproject.eu/wp-content/uploads/2019/06/StreetSpectra_img-300x196.png 300w, https://actionproject.eu/wp-content/uploads/2019/06/StreetSpectra_img-768x501.png 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>STREET SPECTRA</h2>
+              <span class="counting">0</span>
+           </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="200">
+            <a id="street-colors" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2019/06/StreetColors_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2019/06/StreetColors_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2019/06/StreetColors_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2019/06/StreetColors_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>STREET COLORS</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="300">
+            <a id="tatort-street-light" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2019/06/StreetLight_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2019/06/StreetLight_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2019/06/StreetLight_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2019/06/StreetLight_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>TATORT STREET LIGHT</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="400">
+            <a id="loss-of-the-night" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2019/06/LossOfTheNight_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2019/06/LossOfTheNight_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2019/06/LossOfTheNight_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2019/06/LossOfTheNight_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>LOSS OF THE NIGHT</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="500">
+            <a id="students-and-air-pollution" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2019/06/AirPollution_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2019/06/AirPollution_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2019/06/AirPollution_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2019/06/AirPollution_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>STUDENTS, AIR POLLUTION AND DIY SENSING</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="600">
+            <a id="dragonflies" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2019/06/DragonFly_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2019/06/DragonFly_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2019/06/DragonFly_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2019/06/DragonFly_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>CITIZEN SCIENTISTS, DRAGONFLIES AND PESTICIDES</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="700">
+            <a id="citicomplastic" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>CITICOMPLASTIC</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="800">
+            <a id="in-my-backyard" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/02/inmybackyard_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/inmybackyard_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/inmybackyard_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/inmybackyard_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>IN MY BACKYARD</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="800">
+            <a id="noise-maps" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/02/noisemaps_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/noisemaps_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/noisemaps_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/noisemaps_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>NOISE MAPS</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="800">
+            <a id="sonickayak" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/02/sonickayaks_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/sonickayaks_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/sonickayaks_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/sonickayaks_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>SONIC KAYAK</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="800">
+            <a id="water-for-future" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/02/waterforfuture_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/waterforfuture_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/waterforfuture_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/waterforfuture_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>WATER FOR FUTURE</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="800">
+            <a id="wownature" class="h-100 feature-item">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/02/wownature_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/wownature_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/wownature_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/wownature_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <h2>WOWNATURE</h2>
+              <span class="counting">0</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div id="resource_list" class="row">
+          <div  class="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+            <h2  class="mb-5 h3">Resources</h2>
+            <div id="datasets_list" class="rounded border jobs-wrap">
+
+            </div>
+
+            <div id="more_resources_button" style="visibility:hidden" class="col-md-12 text-center mt-5">
+              <a id="more" class="btn btn-primary rounded py-3 px-5"><span class="icon-plus-circle"></span> Show More Resources</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" data-aos="fade">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-5 mb-md-0">
+
+              <div class="img-border">
+                <a href="https://www.youtube.com/watch?v=cIyVwmw2AaU" class="popup-vimeo image-play">
+                  <span class="icon-wrap">
+                    <span class="icon icon-play"></span>
+                  </span>
+                  <img src="images/open_science.jpg" alt="Image" class="img-fluid rounded">
+                </a>
+              </div>
+
+          </div>
+          <div class="col-md-5 ml-auto">
+            <div class="text-left mb-5 section-heading">
+              <h2>Open Science</h2>
+            </div>
+
+            <p class="mb-4 h5 font-italic lineheight1-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..&rdquo;</p>
+            <p>&mdash; <strong class="text-black font-weight-bold">Oscar Corcho</strong>, Full Professor at Universidad Politécnica de Madrid</p>
+            <p><a href="https://www.youtube.com/watch?v=cIyVwmw2AaU" class="popup-vimeo text-uppercase">Watch Video <span class="icon-arrow-right small"></span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-heading mb-4 text-white">About</h3>
+            <p>The ACTION (Participatory science toolkit against pollution) project is co-funded by the European Commission under the Horizon 2020 framework, SwafS programme and started on 1st February 2019.</p>
+            <p><a href="http://actionproject.eu" class="btn btn-primary pill text-white px-4">Read More</a></p>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Data Policies</a></li>
+                    <li><a href="#">Principles</a></li>
+                    <li><a href="#">Infrastructure</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-2">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
+              <div class="col-md-12">
+                <p>
+                  <a href="https://www.facebook.com/action4cs" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/action4cs" class="p-2"><span class="icon-twitter"></span></a>
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <img src="images/europe_project.jpg" width="300rem"></img>
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart text-warning" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+
+
+  <script src="js/mediaelement-and-player.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+
+  var queryIndex = 0;
+  var querySize = 5;
+  var last_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty"
+
+  $("#searchField").submit(function(event){
+    event.preventDefault();
+    //var ES_url = "https://api.dataportal.actionproject.eu/_search?q="+$("#query").val();
+    var ES_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&q="+$("#query").val();
+    last_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&q="+$("#query").val();
+    $("#datasets_list").empty();
+    list_identifiers = [];
+
+
+    $.getJSON(ES_url,function(data){
+
+      if (data.hits.total.value>0){
+
+        $('html, body').animate({
+            scrollTop: $("#resource_list").offset().top
+         }, 2000);
+
+        $.each(data.hits.hits,function(key,val){
+          if (!(list_identifiers.includes(val._source.id))){
+            $("#datasets_list").append(drawResource(val));
+            list_identifiers.push(val._source.id);
+          }
+        });
+
+        if (data.hits.total.value>5){
+            $("#more_resources_button").css("visibility","visible");
+        } else {
+          $("#more_resources_button").css("visibility","hidden");
+        }
+
+      } else {
+
+        $("#datasets_list").empty();
+        $("#datasets_list").append("<center>No results</center>");
+        alert("No results");
+
+      }
+
+    });
+
+  });
+
+  function handleSubmit(){
+    console.log("Submit");
+    var ES_url = "https://api.dataportal.actionproject.eu/_search?pretty";
+
+    /*
+
+    $.getJSON(ES_url,function(data){
+      $.each(data.hits.hits,function(key,val){
+          $("#datasets_list").append(drawResource(val));
+      });
+    });
+    */
+  }
+
+  function drawResource(resource){
+    var iconClassCategory = "icon-suitcase";
+    var textCategory = "Others"
+
+    if (resource._type == "_doc"){
+      iconClassCategory = "icon-suitcase";
+      textCategory = "Document";
+    }
+
+    var licenseText = "undefined"
+
+    if (resource._source.rights[0]=="info:eu-repo/semantics/openAccess"){
+      if (resource._source.rights[1]=="http://creativecommons.org/licenses/by/4.0/legalcode"){
+        licenseText="CC BY 4.0";
+      }
+    }
+
+    var html =   "<a href=\""+resource._source.identifier[0]+"\" class=\"job-item d-block d-md-flex align-items-center  border-bottom fulltime\">"+
+        "<div class=\"company-logo blank-logo text-center text-md-left pl-3\"> "+
+          "<img src=\"images/logo_1.png\" alt=\"Image\" class=\"img-fluid mx-auto\">"+
+        "</div>"+
+        "<div class=\"job-details h-100\">"+
+          "<div class=\"p-3 align-self-center\">"+
+            "<h3>"+resource._source.title+"</h3>"+
+            "<div class=\"d-block d-lg-flex\"><i>"+resource._source.creator+"</i></div>"+
+            "<div class=\"d-block d-lg-flex\">"+
+              "<div class=\"mr-3\"><span class=\"flaticon-project-management mr-1\"></span> "+resource._index+"</div>"+
+              "<div class=\"mr-3\"><span class=\"flaticon-copyright mr-1\"></span>"+licenseText+"</div>"+
+              "<div class=\"mr-3\"><span class=\"flaticon-view mr-1\"></span>views:"+resource._source.views+"</div>"+
+              "<div class=\"mr-3\"><span class=\"flaticon-download-to-storage-drive mr-1\"></span>downloads:"+resource._source.downloads+"</div>"+
+            "</div>"+
+          "</div>"+
+        "</div>"+
+        "<div class=\"job-category align-self-center\">"+
+          "<div class=\"p-3\">"+
+          //  "<span class=\"text-info p-2 rounded border border-info\">Full Time</span>"+
+          "</div>"+
+        "</div>"+
+    "</a>";
+
+    return html;
+  }
+
+  $("#more").on("click", function(){
+    console.log("PASO 1:"+list_identifiers);
+    //var ES_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty"+"&from="+queryIndex+"&size="+querySize;
+      var ES_url = last_url+"&from="+queryIndex+"&size="+querySize;
+      $.getJSON(ES_url,function(data){
+        $.each(data.hits.hits,function(key,val){
+          if (!(list_identifiers.includes(val._source.id))){
+            $("#datasets_list").append(drawResource(val));
+            list_identifiers.push(val._source.id);
+            console.log(val._source.id+"NO");
+          }
+        });
+
+        console.log("PASO 2"+list_identifiers);
+
+        queryIndex = queryIndex + querySize;
+
+        if (queryIndex > data.hits.total.value){
+            $("#more_resources_button").css("visibility","hidden");
+        }
+
+      });
+
+  });
+
+  $("#projects > div > a").on("click", function(){
+    queryIndex = 0;
+    list_identifiers = [];
+    var ES_url = "https://api.dataportal.actionproject.eu/"+this.getAttribute('id')+"/_search?pretty"+"&from="+queryIndex+"&size="+querySize;
+    last_url = "https://api.dataportal.actionproject.eu/"+this.getAttribute('id')+"/_search?pretty";
+
+    $.getJSON(ES_url,function(data){
+
+
+      $('html, body').animate({
+          scrollTop: $("#resource_list").offset().top
+       }, 2000);
+
+      if (data.hits.total.value>0){
+
+        $("#datasets_list").empty();
+        $.each(data.hits.hits,function(key,val){
+
+          $("#datasets_list").append(drawResource(val));
+
+        });
+
+      } else {
+        $("#datasets_list").empty();
+        $("#datasets_list").append("No results");
+
+      }
+
+      if (data.hits.total.value>5){
+          $("#more_resources_button").css("visibility","visible");
+      } else {
+        $("#more_resources_button").css("visibility","hidden");
+      }
+
+    });
+  });
+
+  $(".category").on("click", function(event){
+    event.preventDefault();
+
+    queryIndex=0;
+    list_identifiers = [];
+    if ($(this).attr('id')=="deliverables"){
+      selector="publication-deliverable"
+    } else if ($(this).attr('id')=="posters"){
+      selector="poster";
+    } else if ($(this).attr('id')=="software"){
+      selector="software";
+    } else if ($(this).attr('id')=="datasets"){
+      selector="datasets";
+    }
+
+    var ES_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&q=type:"+selector+"&from="+queryIndex+"&size="+querySize;
+    last_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&q=type:"+selector;
+    $("#datasets_list").empty();
+
+
+    $.getJSON(ES_url,function(data){
+
+      if (data.hits.total.value>0){
+
+        $('html, body').animate({
+            scrollTop: $("#resource_list").offset().top
+         }, 2000);
+
+        $.each(data.hits.hits,function(key,val){
+          if (!(list_identifiers.includes(val._source.id))){
+            $("#datasets_list").append(drawResource(val));
+            list_identifiers.push(val._source.id);
+          }
+        });
+
+        if (data.hits.total.value>5){
+            $("#more_resources_button").css("visibility","visible");
+        } else {
+          $("#more_resources_button").css("visibility","hidden");
+        }
+
+      } else {
+
+        $("#datasets_list").empty();
+        $("#datasets_list").append("<center>No results</center>");
+        alert("No results");
+
+      }
+
+    });
+
+  });
+
+  </script>
+
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                for (var i = 0; i < total; i++) {
+                    new MediaElementPlayer(mediaElements[i], {
+                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                        shimScriptAccess: 'always',
+                        success: function () {
+                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                            for (var j = 0; j < targetTotal; j++) {
+                                target[j].style.visibility = 'visible';
+                            }
+                  }
+                });
+                }
+            });
+    </script>
+
+    <script>
+        var ES_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&sort=_index:desc"+"&from="+queryIndex+"&size="+querySize;
+        var last_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&sort=_index:desc";
+        var ES_statistics_query="https://api.dataportal.actionproject.eu/communities/_search?pretty"
+        var list_identifiers = [];
+        //var ES_url = last_url+"&from="+queryIndex+"&size="+querySize;
+        //var ES_url = "https://api.dataportal.actionproject.eu/_search"
+
+        /*
+        var settings = {
+          "url": "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty",
+          "method": "GET",
+          "timeout": 0,
+          "dataType": "json",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({"size":0,"aggs":{"unique_id":{"terms":{"field":"id.keyword"},"aggs":{"sample_docs":{"top_hits":{"sort":[{"_index":{"order":"desc"}}],"size":1}}}}}}),
+        };
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+*/
+        /*
+        $.getJSON(ES_url,{
+          	size:0,
+            aggs: {
+              unique_id: {
+                terms: {
+                  field: "id.keyword"
+                },
+                aggs: {
+                  sample_docs: {
+                    top_hits: {
+                      size: 1
+                    }
+                  }
+                }
+              }
+            }
+          }).done(function(data){
+                    $.each(data.hits.hits,function(key,val){
+                        $("#datasets_list").append(drawResource(val));
+                    });
+
+                    if (data.hits.total.value > 5){
+                      $("#more_resources_button").css("visibility","visible");
+                      queryIndex =  querySize;
+                    }
+                  });
+*/
+
+
+        $.getJSON(ES_url,function(data){
+          $.each(data.hits.hits,function(key,val){
+              if (!(list_identifiers.includes(val._source.id))){
+                $("#datasets_list").append(drawResource(val));
+                list_identifiers.push(val._source.id);
+              }
+          });
+
+          if (data.hits.total.value > 5){
+            $("#more_resources_button").css("visibility","visible");
+            queryIndex =  querySize+1;
+          }
+        });
+
+        $.getJSON(ES_statistics_query,function(data){
+          $.each(data.hits.hits,function(key,val){
+              if (val._source.community=="street-spectra"){
+                $("#street-spectra span.counting").text(val._source.documents);
+              } else if (val._source.community=="students-and-air-pollution"){
+                $("#students-and-air-pollution span.counting").text(val._source.documents);
+              } else if (val._source.community=="sonickayak"){
+                $("#sonickayak span.counting").text(val._source.documents);
+              }
+          });
+        });
+
+    </script>
+
+  </body>
+</html>
