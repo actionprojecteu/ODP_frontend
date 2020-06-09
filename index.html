@@ -252,35 +252,6 @@
       </div>
     </div>
 
-    <div class="site-section" data-aos="fade">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-5 mb-md-0">
-
-              <div class="img-border">
-                <a href="https://www.youtube.com/watch?v=cIyVwmw2AaU" class="popup-vimeo image-play">
-                  <span class="icon-wrap">
-                    <span class="icon icon-play"></span>
-                  </span>
-                  <img src="images/open_science.jpg" alt="Image" class="img-fluid rounded">
-                </a>
-              </div>
-
-          </div>
-          <div class="col-md-5 ml-auto">
-            <div class="text-left mb-5 section-heading">
-              <h2>Open Science</h2>
-            </div>
-
-            <p class="mb-4 h5 font-italic lineheight1-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..&rdquo;</p>
-            <p>&mdash; <strong class="text-black font-weight-bold">Oscar Corcho</strong>, Full Professor at Universidad Politécnica de Madrid</p>
-            <p><a href="https://www.youtube.com/watch?v=cIyVwmw2AaU" class="popup-vimeo text-uppercase">Watch Video <span class="icon-arrow-right small"></span></a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <footer class="site-footer">
       <div class="container">
 
@@ -381,6 +352,7 @@
 
         if (data.hits.total.value>5){
             $("#more_resources_button").css("visibility","visible");
+            queryIndex =  querySize+1;
         } else {
           $("#more_resources_button").css("visibility","hidden");
         }
@@ -455,8 +427,6 @@
   }
 
   $("#more").on("click", function(){
-    console.log("PASO 1:"+list_identifiers);
-    //var ES_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty"+"&from="+queryIndex+"&size="+querySize;
       var ES_url = last_url+"&from="+queryIndex+"&size="+querySize;
       $.getJSON(ES_url,function(data){
         $.each(data.hits.hits,function(key,val){
@@ -466,8 +436,6 @@
             console.log(val._source.id+"NO");
           }
         });
-
-        console.log("PASO 2"+list_identifiers);
 
         queryIndex = queryIndex + querySize;
 
@@ -553,6 +521,7 @@
 
         if (data.hits.total.value>5){
             $("#more_resources_button").css("visibility","visible");
+            queryIndex =  querySize;
         } else {
           $("#more_resources_button").css("visibility","hidden");
         }
@@ -596,52 +565,7 @@
         var last_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&sort=_index:desc";
         var ES_statistics_query="https://api.dataportal.actionproject.eu/communities/_search?pretty"
         var list_identifiers = [];
-        //var ES_url = last_url+"&from="+queryIndex+"&size="+querySize;
-        //var ES_url = "https://api.dataportal.actionproject.eu/_search"
 
-        /*
-        var settings = {
-          "url": "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty",
-          "method": "GET",
-          "timeout": 0,
-          "dataType": "json",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "data": JSON.stringify({"size":0,"aggs":{"unique_id":{"terms":{"field":"id.keyword"},"aggs":{"sample_docs":{"top_hits":{"sort":[{"_index":{"order":"desc"}}],"size":1}}}}}}),
-        };
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-        });
-*/
-        /*
-        $.getJSON(ES_url,{
-          	size:0,
-            aggs: {
-              unique_id: {
-                terms: {
-                  field: "id.keyword"
-                },
-                aggs: {
-                  sample_docs: {
-                    top_hits: {
-                      size: 1
-                    }
-                  }
-                }
-              }
-            }
-          }).done(function(data){
-                    $.each(data.hits.hits,function(key,val){
-                        $("#datasets_list").append(drawResource(val));
-                    });
-
-                    if (data.hits.total.value > 5){
-                      $("#more_resources_button").css("visibility","visible");
-                      queryIndex =  querySize;
-                    }
-                  });
-*/
 
 
         $.getJSON(ES_url,function(data){
