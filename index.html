@@ -80,8 +80,9 @@
                         </ul>
                       </li>
                     -->
-                      <li><a href="contact.html">Contact</a></li>
-                      <!--
+
+                      <li><a href="https://actionproject.eu/contacts/">Contact</a></li>
+                    <!--
                       <li><a href="new-post.html"><span class="bg-primary text-white py-3 px-4 rounded"><span class="icon-plus mr-3"></span>Post New Job</span></a></li>
                     -->
                     </ul>
@@ -126,7 +127,7 @@
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <p class="small">or browse by category: <a class="category" id="deliverables">Deliverables</a> <a class="category" id="software">Software</a><a class="category" id="datasets">Datasets</a><a class="category" id="posters">Posters</a></p>
+                  <p class="medium">or browse by category: <a class="category" id="deliverables">Deliverables</a> <a class="category" id="software">Software</a><a class="category" id="datasets">Datasets</a><a class="category" id="posters">Posters</a></p>
                 </div>
               </div>
 
@@ -189,7 +190,7 @@
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="700">
             <a id="citicomplastic" class="h-100 feature-item">
-              <img src="https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project.jpg" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project.jpg 825w, https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project-300x196.jpg 300w, https://actionproject.eu/wp-content/uploads/2020/02/CitiComPlastic_project-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
+              <img src="https://actionproject.eu/wp-content/uploads/2020/04/citycomplastic3.png" width="100%" srcset="https://actionproject.eu/wp-content/uploads/2020/04/citycomplastic3.png 825w, https://actionproject.eu/wp-content/uploads/2020/04/citycomplastic3-300x196.png 300w, https://actionproject.eu/wp-content/uploads/2020/04/citycomplastic3-768x501.jpg 768w" sizes="(max-width: 825px) 100vw, 825px">
               <h2>CITICOMPLASTIC</h2>
               <span class="counting">0</span>
             </a>
@@ -262,20 +263,22 @@
             <p>The ACTION (Participatory science toolkit against pollution) project is co-funded by the European Commission under the Horizon 2020 framework, SwafS programme and started on 1st February 2019.</p>
             <p><a href="http://actionproject.eu" class="btn btn-primary pill text-white px-4">Read More</a></p>
           </div>
+
           <div class="col-md-6">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                   <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Data Policies</a></li>
-                    <li><a href="#">Principles</a></li>
-                    <li><a href="#">Infrastructure</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="https://actionproject.eu/about/">About</a></li>
+                  <!--  <li><a href="#">Data Policies</a></li> -->
+                      <!--  <li><a href="#">Principles</a></li>-->
+                    <li><a href="https://www.zenodo.org/record/3885545#.XuY1RGozauU" target="_blank">Infrastructure</a></li>
+                    <!--   <li><a href="#">FAQ</a></li>-->
                   </ul>
               </div>
             </div>
           </div>
+
 
 
           <div class="col-md-2">
@@ -385,11 +388,28 @@
 
   function drawResource(resource){
     var iconClassCategory = "icon-suitcase";
-    var textCategory = "Others"
+    var textCategory = "others"
 
+/*
     if (resource._type == "_doc"){
       iconClassCategory = "icon-suitcase";
       textCategory = "Document";
+    }
+    console.log(resource);
+*/
+    console.log(resource);
+    if (resource._source.type[1]=="publication-deliverable"){
+      iconClassCategory = "publication-deliverable";
+      textCategory = "DELIVERABLE";
+    } else if (resource._source.type[1]=="poster"){
+      iconClassCategory ="poster";
+      textCategory = "POSTER";
+    } else if (resource._source.type[1]=="software"){
+      iconClassCategory ="software";
+      textCategory = "SOFTWARE";
+    } else if (resource._source.type[1]=="dataset"){
+      iconClassCategory ="datasets";
+      textCategory = "DATASET";
     }
 
     var licenseText = "undefined"
@@ -400,9 +420,11 @@
       }
     }
 
-    var html =   "<a href=\""+resource._source.identifier[0]+"\" class=\"job-item d-block d-md-flex align-items-center  border-bottom fulltime\">"+
-        "<div class=\"company-logo blank-logo text-center text-md-left pl-3\"> "+
-          "<img src=\"images/logo_1.png\" alt=\"Image\" class=\"img-fluid mx-auto\">"+
+    var html =   "<a href=\""+resource._source.identifier[0]+"\" class=\"job-item d-block d-md-flex align-items-center  border-bottom fulltime\" target=\"_blank\">"+
+        "<div class=\"category text-center text-md-left pl-3\"> "+
+        "<span class=\"badge badge-type\">"+textCategory+"</span>"+
+      //"<span class=\"icon-file-o img-fluid mx-auto\"></span>"+
+          //"<img src=\"images/logo_1.png\" alt=\"Image\" class=\"img-fluid mx-auto\">"+
         "</div>"+
         "<div class=\"job-details h-100\">"+
           "<div class=\"p-3 align-self-center\">"+
@@ -496,7 +518,7 @@
     } else if ($(this).attr('id')=="software"){
       selector="software";
     } else if ($(this).attr('id')=="datasets"){
-      selector="datasets";
+      selector="dataset";
     }
 
     var ES_url = "https://api.dataportal.actionproject.eu/*,-*communities/_search?pretty&q=type:"+selector+"&from="+queryIndex+"&size="+querySize;
