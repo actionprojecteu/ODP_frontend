@@ -961,3 +961,8 @@ a {
     background: #948150;
     color: #fff;
     border: 1px solid transparent; }
+
+  .badge-type{
+    color: #ffffff;
+    background-color: #948150;
+  }
